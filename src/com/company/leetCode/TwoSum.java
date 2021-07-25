@@ -1,5 +1,7 @@
 package com.company.leetCode;
 
+import java.util.Arrays;
+
 public class TwoSum {
 
     /**
@@ -18,5 +20,36 @@ public class TwoSum {
      * Get the index of the two values and insert them into an array
      * return the array
      */
+
+    public static int[] twoSum(int[] nums, int target) {
+
+        int[] sumIndices = new int[2];
+
+        for(int i = 0; i < nums.length; i++){
+
+            for (int j = 1; j < nums.length; j++){
+
+                if(nums[i] + nums[j] == target){
+
+                    sumIndices[0] = i;
+                    sumIndices[1] = j;
+
+                }
+            }
+
+
+        }
+
+        return sumIndices;
+
+    }
+
+    public static void main(String[] args){
+        int[] a = {3,5,6,8,4,1};
+
+        int[] b = TwoSum.twoSum(a,4);
+
+        System.out.println(Arrays.toString(b));
+    }
 
 }

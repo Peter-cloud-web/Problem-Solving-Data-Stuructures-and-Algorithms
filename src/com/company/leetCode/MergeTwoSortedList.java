@@ -1,4 +1,4 @@
-//package com.company.leetCode;
+package com.company.leetCode;
 //
 //import java.util.ArrayList;
 //import java.util.LinkedList;
@@ -53,3 +53,39 @@
 //
 //    }
 //}
+
+import java.util.LinkedList;
+
+class Node{
+    int data;
+    Node next;
+    Node head;
+
+    Node(int data){
+        this.data = data;
+    }
+
+    public static int countNodes(Node head){
+        int n = 1;
+        Node current = head;
+        while (current.next != null){
+            current = current.next;
+            n++;
+        }
+        return n;
+    }
+
+    public static void push(int data){
+
+        Node newNode = new Node(data);
+    }
+
+    public static void main(String[] args){
+
+        LinkedList n = new LinkedList();
+
+
+
+    }
+ }
+
